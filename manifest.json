@@ -1,6 +1,6 @@
 {
     "name": "Youtube QR Share",
-    "description": "this extention allows you to share video via a qr code",
+    "description": "Youtube QR Share is an extension that allows you to share youtube videos with a QR code so you can later on scan on your phone",
     "version": "1.0.0",
     "manifest_version": 3,
     "content_scripts": [
@@ -16,7 +16,7 @@
         "128": "/images/logo128.png"
     },
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "/popup/popup.html",
         "default_title": "QR Share",
         "default_icon": "/images/logo.png"
     },
