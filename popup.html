@@ -7,80 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        html, body {
-            font-family: 'Open+Sans';
-            font-size: 14px;
-            margin: 0;
-            min-height: 100px;
-            padding: 0;
-            width: 384px;
-        }
-
-        h1 {
-            font-family: 'Menlo', monospace;
-            font-size: 22px;
-            font-weight: 400;
-            margin: 0;
-            color: #333
-        }
-        a:link, a:visited {
-            color: #000;
-            outline: 0;
-            text-decoration: none;
-        }
-        img {
-            width: 50px
-        }
-        .modal-header {
-            align-items: center;
-            border-bottom: 0.5px solid #dadada;
-        }
-        .modal-content {
-            padding: 0 22px;
-        }
-
-        .modal-icons {
-            border-top: 0.5 solid #dadada;
-            height: 50px;
-            width: 100%;
-        }
-
-        logo {
-            padding: 16px;
-        }
-
-        .logo-icon {
-            vertical-align: text-bottom;
-            margin-right: 12px;
-        }
-
-        version {
-            color: #444;
-            font-size: 18px;
-        }
-
-        .flex-container {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 22px;
-        }
-
-        .flex {
-            opacity: 1;
-            transition: opacity 0.2s ease-in-out;
-            width: 120px;
-        }
-
-        .flex:hover {
-            opacity: 0.4;
-        }
-
-        .flex .fa {
-            font-size: 40px;
-            color: #333
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="modal-header">
@@ -95,11 +22,18 @@
     </div>
     <div class="modal-icons">
         <div class="flex-container">
-            <div class="flex" id="qrcode">
+            <div class="flex">
                 <a href="https://github.com/Sizzeh/youtube-qr-code" target="_blank">
                     <i class="fab fa-github"></i>
                     <span>Github</span>
                 </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="flex-container-footer">
+            <div class="flex-footer">
+                <span>Made by: Sizzeh</span>
             </div>
         </div>
     </div>
