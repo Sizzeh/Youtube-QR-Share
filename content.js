@@ -1,5 +1,4 @@
 "use strict";
-const client = new Code();
 var isAlreadyLoaded = false;
 
 
@@ -72,6 +71,8 @@ class Code {
         console.log("%c[Youtube-QR] Set Style for QR Code.", "color:green");
     }
 }
+
+const client = new Code();
 
 // main function
 function main() {
