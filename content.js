@@ -1,12 +1,16 @@
 "use strict";
+const client = new Code();
 var isAlreadyLoaded = false;
 
+
+// checks
 function checks() {
     if (document.getElementsByClassName('yt-copy-link-renderer')[0]) { // gets the link
         return true;
     }
     return false;
 }
+
 
 class Code {
     constructor(options) {
@@ -20,12 +24,10 @@ class Code {
             height: 100-this.style.padding
         }
         this.currentUrl = null
-        this.newURL = true;
-
         this.wantedStyle = `display:block;padding: ${this.style.padding}px;background:white;`
     }
     /**
-     *  Use to update to a new code
+     *  Use to update to a new qr code
      *  @param {string} url - needed url to update code
      */
     update(url) {
@@ -45,13 +47,15 @@ class Code {
         }
         return document.getElementById('share-url').value;
     }
-
+    /**
+     *  Create initial qr code
+     */
     createCode() {
         this.code = new QRCode(this.element, this.options);
         console.log("%c[Youtube-QR] First Load.", "color:green");
     }
     /**
-     *  Get the url from share box
+     *  Set the local element
      * @param {string} element - html element
      */
     setElement(element) {
@@ -69,8 +73,7 @@ class Code {
     }
 }
 
-const client = new Code();
-
+// main function
 function main() {
     if (!checks()) return console.log("%c[Youtube-QR] Checks Failed.", "color:red");
     if (!isAlreadyLoaded) {
@@ -84,6 +87,8 @@ function main() {
     }
 }
 
+
+// event handlers
 document.addEventListener('keyup', () => { // if user manually edits the time code causing a change to the link running the code
     setTimeout(() => {
         main();
